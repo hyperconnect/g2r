@@ -1,0 +1,3 @@
+[submodule "ParlAI"]
+	path = ParlAI
+	url = https://github.com/emnlp-2021-g2r/ParlAI
