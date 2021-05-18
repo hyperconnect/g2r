@@ -11,8 +11,12 @@ We provide a [link](https://drive.google.com/file/d/1OtPvaUZDlHG0btZ4EVen092xDnl
 
 ### Dataset preparation
 ```
+# Assuming that the Blended SKill Talk dataset is already build in ParlAI
+
 PARLAI_DIR=/your/parlai/library/dir
 mkdir -p ${PARLAI_DIR}/data/bst_distill
+ln -s ${PARLAI_DIR}/data/blended_skill_talk/valid.txt ${PARLAI_DIR}/data/bst_distill/valid.txt
+ln -s ${PARLAI_DIR}/data/blended_skill_talk/test.txt ${PARLAI_DIR}/data/bst_distill/test.txt
 
 python3 score_result_to_parlai.py \
   --input-path ./datasets/emnlp_2021_g2r_dataset/bst_data_level_g2r_dialogue.jsonl \
